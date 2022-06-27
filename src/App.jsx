@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
-import Header from './components/Header';
-import ListadoGastos from './components/ListadoGastos';
-import Modal from './components/Modal';
+import Header from './components/Header.jsx';
+import ListadoGastos from './components/ListadoGastos.jsx';
+import Modal from './components/Modal.jsx';
 
 import { generarId } from './helpers/index';
 
@@ -38,11 +38,12 @@ const App = () => {
         }, 500);
     }
 
-    console.log(gastos);
-
+    /* console.log(gastos);
+ */
     return (
         <div className={modal ? "fijar" : ""}>
             <Header
+                gastos={gastos}
                 presupuesto={presupuesto}
                 setPresupuesto={setPresupuesto}
                 isValidPresupuesto={isValidPresupuesto}
