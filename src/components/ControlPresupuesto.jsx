@@ -42,9 +42,9 @@ const ControlPresupuesto = ({gastos, presupuesto}) => {
             value={porcentaje}
             text={`${porcentaje.toFixed(2)}% Gastado`}
             styles={buildStyles({
-                pathColor : '#3B82F6',
+                pathColor : porcentaje > 100 ? '#DC2626' : '#3B82F6',
                 trailColor : '#F5F5F5',
-                textColor : '#3B82F6',
+                textColor : porcentaje > 100 ? '#DC2626' : '#3B82F6',
             })}
         />
 
@@ -52,7 +52,7 @@ const ControlPresupuesto = ({gastos, presupuesto}) => {
             <p>
                 <span>Presupuesto: </span> {formatearCantidad(presupuesto)}
             </p>
-            <p>
+            <p className={`${disponible < 0 ? 'negativo' : ''}`}>
                 <span>Disponible: </span> {formatearCantidad(disponible)}
             </p>
             <p>
