@@ -41,7 +41,7 @@ const App = () => {
     console.log(gastos);
 
     return (
-        <div>
+        <div className={modal ? "fijar" : ""}>
             <Header
                 presupuesto={presupuesto}
                 setPresupuesto={setPresupuesto}
