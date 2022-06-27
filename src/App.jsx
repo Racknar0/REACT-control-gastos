@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import Header from './components/Header';
+import ListadoGastos from './components/ListadoGastos';
 import Modal from './components/Modal';
 
 import { generarId } from './helpers/index';
@@ -48,6 +49,12 @@ const App = () => {
             />
 
             {isValidPresupuesto && (
+                <>
+                <main>
+                    <ListadoGastos 
+                    gastos={gastos}
+                    />
+                </main>
                 <div className="nuevo-gasto">
                     <img
                         src={IconoNuevoGasto}
@@ -55,6 +62,7 @@ const App = () => {
                         onClick={handleNuevoGasto}
                     />
                 </div>
+                </>
             )}
 
             {modal && (
