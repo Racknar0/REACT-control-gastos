@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
-import { CircularProgressbar } from 'react-circular-progressbar';
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 const ControlPresupuesto = ({gastos, presupuesto}) => {
@@ -40,7 +40,12 @@ const ControlPresupuesto = ({gastos, presupuesto}) => {
     <div className='contenedor-presupuesto contenedor sombra dos-columnas'>
         <CircularProgressbar 
             value={porcentaje}
-            text={`${porcentaje.toFixed(2)}%`}
+            text={`${porcentaje.toFixed(2)}% Gastado`}
+            styles={buildStyles({
+                pathColor : '#3B82F6',
+                trailColor : '#F5F5F5',
+                textColor : '#3B82F6',
+            })}
         />
 
         <div className='contenido-presupuesto'>
