@@ -21,6 +21,10 @@ const App = () => {
 
     }
 
+    const guardarGasto = gasto => {
+        console.log(gasto);
+    }
+
     return (
         <div>
             <Header
@@ -32,11 +36,22 @@ const App = () => {
 
             {isValidPresupuesto && (
                 <div className="nuevo-gasto">
-                    <img src={IconoNuevoGasto} alt="Nuevo Gastos" onClick={handleNuevoGasto} />
+                    <img
+                        src={IconoNuevoGasto}
+                        alt="Nuevo Gastos"
+                        onClick={handleNuevoGasto}
+                    />
                 </div>
             )}
 
-            {modal && <Modal setModal={setModal} animarModal={animarModal} setAnimarModal={setAnimarModal} />}
+            {modal && (
+                <Modal
+                    setModal={setModal}
+                    animarModal={animarModal}
+                    setAnimarModal={setAnimarModal}
+                    guardarGasto={guardarGasto}
+                />
+            )}
         </div>
     );
 };
