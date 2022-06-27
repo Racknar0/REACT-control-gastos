@@ -58,6 +58,13 @@ const App = () => {
         }, 500);
     }
 
+    const eliminarGasto = id => {
+        const gastosActualizados = gastos.filter( gastoState => gastoState.id !== id);
+        console.log(gastosActualizados);
+        setGastos(gastosActualizados);
+    }
+
+
     /* console.log(gastos);
  */
     return (
@@ -76,6 +83,7 @@ const App = () => {
                     <ListadoGastos 
                     gastos={gastos}
                     setGastoEditar={setGastoEditar}
+                    eliminarGasto={eliminarGasto}
                     />
                 </main>
                 <div className="nuevo-gasto">
