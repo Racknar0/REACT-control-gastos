@@ -1,12 +1,14 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import Header from './components/Header.jsx';
+import Filtros from './components/Filtros';
 import ListadoGastos from './components/ListadoGastos.jsx';
 import Modal from './components/Modal.jsx';
 
 import { generarId } from './helpers/index';
 
 import IconoNuevoGasto from './img/nuevo-gasto.svg';
+
 
 const App = () => {
     const [presupuesto, setPresupuesto] = useState(
@@ -21,6 +23,8 @@ const App = () => {
     const [animarModal , setAnimarModal] = useState(false);
     
     const [gastoEditar, setGastoEditar] = useState({});
+
+    const [filtro , setFiltro] = useState('');
 
     useEffect(() => {
 
@@ -44,6 +48,13 @@ const App = () => {
     useEffect(() => {
         localStorage.setItem('gastos', JSON.stringify(gastos) ?? []);
     }, [gastos]);
+
+
+    useEffect(() => {
+        if(filtro) {
+            console.log('Filtrando...');
+        }
+    }, [filtro]);
 
 
     useEffect(() => {
@@ -110,6 +121,10 @@ const App = () => {
             {isValidPresupuesto && (
                 <>
                 <main>
+                    <Filtros 
+                        filtro={filtro}
+                        setFiltro={setFiltro}
+                    />
                     <ListadoGastos 
                     gastos={gastos}
                     setGastoEditar={setGastoEditar}
