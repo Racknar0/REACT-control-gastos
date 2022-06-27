@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import Header from './components/Header';
+import Modal from './components/Modal';
 
 import IconoNuevoGasto from './img/nuevo-gasto.svg';
 
@@ -29,7 +30,7 @@ const App = () => {
                 </div>
             )}
 
-            {modal && <p>Desde modal</p>}
+            {modal && <Modal setModal={setModal} />}
         </div>
     );
 };
