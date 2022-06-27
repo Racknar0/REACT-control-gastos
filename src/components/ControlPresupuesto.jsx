@@ -13,7 +13,10 @@ const ControlPresupuesto = ({gastos, presupuesto}) => {
             return acumulador + gasto.cantidad;
         }, 0);
 
+        const totalDisponible = presupuesto - totalGastado;
+
         setGastado(totalGastado);
+        setDisponible(totalDisponible);
     }, [gastos]);
 
 
