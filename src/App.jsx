@@ -33,7 +33,7 @@ const App = () => {
         setGastoEditar({});
 
         setTimeout(() => {
-            setAnimarModal(true)
+            setAnimarModal(true) 
         }, 500);
 
     }
@@ -43,6 +43,7 @@ const App = () => {
             //Actualizar
             const gastosActualizados = gastos.map( gastoState => gastoState.id === gasto.id ? gasto : gastoState);
             setGastos(gastosActualizados);
+            setGastoEditar({});
 
         } else {
             //Agregar
@@ -62,6 +63,7 @@ const App = () => {
         const gastosActualizados = gastos.filter( gastoState => gastoState.id !== id);
         console.log(gastosActualizados);
         setGastos(gastosActualizados);
+        
     }
 
 
@@ -103,6 +105,7 @@ const App = () => {
                     setAnimarModal={setAnimarModal}
                     guardarGasto={guardarGasto}
                     gastoEditar={gastoEditar}
+                    setGastoEditar={setGastoEditar}
                 />
             )}
         </div>
