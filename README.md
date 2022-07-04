@@ -1,1 +1,1 @@
-deploy: 
+deploy: https://react-control-gastos-1.netlify.app/
