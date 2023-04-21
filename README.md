@@ -12,11 +12,11 @@
 
 <div align="center">
   
-![GitHub last commit](https://img.shields.io/github/last-commit/Racknar0/REACT-Gallery_APP_PWA)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Racknar0/REACT-Gallery_APP_PWA)
-![GitHub language count](https://img.shields.io/github/languages/count/Racknar0/REACT-Gallery_APP_PWA)
-![GitHub top language](https://img.shields.io/github/languages/top/Racknar0/REACT-Gallery_APP_PWA)
-![GitHub issues](https://img.shields.io/github/issues/Racknar0/REACT-Gallery_APP_PWA)
+![GitHub last commit](https://img.shields.io/github/last-commit/Racknar0/REACT-control-gastos)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Racknar0/REACT-control-gastos)
+![GitHub language count](https://img.shields.io/github/languages/count/Racknar0/REACT-control-gastos)
+![GitHub top language](https://img.shields.io/github/languages/top/Racknar0/REACT-control-gastos)
+![GitHub issues](https://img.shields.io/github/issues/Racknar0/REACT-control-gastos)
 
 </div>
 
